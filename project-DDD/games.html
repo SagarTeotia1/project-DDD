@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #00204a ;
+            color: white;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .game {
+            text-align: center;
+            width: 30%;
+            margin: 20px;
+            padding: 15px;
+            border-radius: 8px;
+           
+            background-color: white;
+        }
+
+        .game img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        div {
+            background: grey;
+             
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Games</h1>
+    </header>
+
+    <main>
+        <div class="game" >
+            <a href="" target="_main" > 
+                <img src="images/relay logo.jpg" alt="" width="500"> </a>
+            
+            <h2>Rehabilitation Relay</h2>
+             <p>
+                Rehabilitation Relay" is an immersive and empowering endless runner game that serves as a digital metaphor for the journey of breaking free from drug addiction. Players embark on a compelling and challenging adventure where the primary objective is to overcome obstacles and hurdles that symbolize the difficulties faced during the recovery process
+             </p>
+            
+             
+        </div>
+
+        <div class="game" >
+            <a href="" target="_main" > 
+                <img src="images/choice logo.png" alt="" > </a>
+            
+            <h2>Sobriety Decision Saga</h2>
+            <p>
+                "Sobriety Decision Saga" is an immersive and transformative gaming experience that places players at the heart of critical choices in the journey towards recovery from drug addiction. This game combines the elements of narrative-driven gameplay and decision-making to create a powerful and thought-provoking adventure.
+                As players navigate through the virtual world of "Sobriety Decision Saga," they are confronted with pivotal decisions that mirror the challenges individuals face during the process of achieving and maintaining sobriety. Each choice has consequences, shaping the narrative and the character's progress in their quest for a clean and healthy life.           
+            </p>
+        </div>
+
+        <div class="game" >
+            <a href="" target="_main" > 
+                <img src="images/vr game logo.jpg" alt="" > </a>
+            
+            <h2>Decision Vr </h2>
+            <p>
+               It is an innovative and immersive approach to drug awareness, designed to engage users in a compelling and educational experience. This VR app leverages cutting-edge technology to create an interactive journey that fosters awareness about the challenges of substance abuse and the importance of digital detoxification. 
+               Users are transported into realistic virtual environments that mirror both the digital landscape and the real-world consequences of drug abuse. The visual immersion enhances the impact of the awareness campaign.           
+            </p>
+        </div>
+        <div class="game" >
+            <a href="https://www.spatial.io/s/Nav-Yuva-Chetna-659021dcce1e4b9356300585?share=3783091894441117926" target="_main" > 
+                <img src="images/meta detox.jpeg" alt="" > </a>
+            
+            <h2>Meta Detox</h2>
+            <p>
+                "Meta Detox takes a holistic approach to empower individuals in their journey towards a healthier digital and mental lifestyle. Going beyond mere awareness, MetaDetox introduces a metagame framework, engaging users in a dynamic, gamified experience designed to detoxify both their digital habits and perspectives on substance use. Through interactive challenges, community support, and personalized plans, MetaDetox strives to redefine the narrative around digital well-being and substance awareness, fostering a positive, lasting impact on users' lives."
+            </p>
+        </div>
+    </main>
+
+    
+    </div>
+
+    
+
+    <script>
+        function showDescription(title, description) {
+            document.getElementById("gameTitle").innerText = title;
+            document.getElementById("gameDescription").innerText = description;
+            document.getElementById("descriptionModal").style.display = "block";
+        }
+
+        function closeDescriptionModal() {
+            document.getElementById("descriptionModal").style.display = "none";
+        }
+
+        // Close modal if clicked outside the modal
+        window.onclick = function(event) {
+            var modal = document.getElementById("descriptionModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

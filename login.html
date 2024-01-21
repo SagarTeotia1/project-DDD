@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #00204a;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007fa4;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        a {
+            color: #007fa4;
+            text-decoration: none;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Login Form Container -->
+<div class="form-container" id="loginContainer">
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="submitLoginForm(event)">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="#" onclick="showSignupForm()">Sign up here</a>.</p>
+</div>
+
+<!-- Signup Form Container (Initially Hidden) -->
+<div class="form-container" id="signupContainer" style="display: none;">
+    <h2>Sign Up</h2>
+    <form id="signupForm" onsubmit="submitSignupForm(event)">
+        <label for="newEmail">New Email:</label>
+        <input type="email" id="newEmail" name="newEmail" required>
+        <br>
+        <label for="newPassword">New Password:</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+        <br>
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <p>Already have an account? <a href="#" onclick="showLoginForm()">Login here</a>.</p>
+</div>
+
+<!-- JavaScript Functions -->
+<script>
+    function submitLoginForm(event) {
+        event.preventDefault(); // Prevents the default form submission behavior
+
+        // Get values from the email and password fields
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        // Check if email and password are filled (add additional validation if needed)
+        if (email && password) {
+            // Replace 'https://example.com/dashboard' with the URL you want to redirect to
+            window.location.href = 'https://example.com/dashboard';
+        } else {
+            alert('Please fill in both email and password fields.');
+        }
+    }
+
+    function submitSignupForm(event) {
+        event.preventDefault(); // Prevents the default form submission behavior
+
+        // Get values from the new email and password fields
+        var newEmail = document.getElementById('newEmail').value;
+        var newPassword = document.getElementById('newPassword').value;
+
+        // Perform signup logic here (e.g., send data to a server)
+        // For simplicity, you can just display an alert
+        alert('Sign up successful!');
+
+        // Optionally, you can redirect to the login page or another page
+        window.location.href = 'index.html';
+    }
+
+    function showSignupForm() {
+        document.getElementById('loginContainer').style.display = 'none';
+        document.getElementById('signupContainer').style.display = 'block';
+    }
+
+    function showLoginForm() {
+        document.getElementById('loginContainer').style.display = 'block';
+        document.getElementById('signupContainer').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

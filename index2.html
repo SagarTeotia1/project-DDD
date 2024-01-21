@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Meta page</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+<!--
+    
+TemplateMo 557 Grad School
+
+https://templatemo.com/tm-557-grad-school
+
+-->
+  </head>
+
+<body>
+
+   
+  <!--header-->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="#">DigitalDrugDetox</a>
+    </div>
+    
+  </header>
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+          <source src="assets/images/course-video.mp4" type="video/mp4" />
+      </video>
+
+      <div class="video-overlay header-text">
+          <div class="caption">
+              <h2>Nav Yua Chetna</h2>
+              <img src="images/logo DDD.jpeg " width="150">
+              
+          </div>
+      </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+
+
+  
+
+  
+
+  
+
+  <section class="section courses" data-section="section4">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Choose Your Meta</h2>
+          </div>
+        </div>
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <a href="https://www.spatial.io/s/SoberSphere-655c8e28c41d46b41c94c3e3?share=0" target="_main" > 
+              <img src="images/meta-sobersphere.png" alt="Meta 1 "  > </a>
+            <div class="down-content">
+              <h4>Sober Sphere</h4>
+              <p></p>
+              <div class="author-image">
+                <a href="" target="_main" > 
+                  <img src="images/meta-sobersphere.png" > </a>
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <a href="https://www.spatial.io/s/Nav-Yuva-Chetnaa-659b86cdc9066d9a5541aad6?share=8650872432170841962" target="_main" > 
+              <img src="images/meta-navyuachetna.png"  > </a>
+            <div class="down-content">
+              <h4>Open Auditorium</h4>
+              <p></p>
+              <div class="author-image">
+                <a href="" target="_main" > 
+                    <img src="images/meta-navyuachetna.png"   > </a>
+              </div>
+              <div class="text-button-free">
+                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <a href="https://www.spatial.io/s/NAV-YUVA-CHETNAA-65aab2143a7699ce36de2e57?share=7120548477935964886" target="_main" > 
+              <img src="images/meta-NAVYUACHTNA.png" alt="meta 3" > </a>
+            <div class="down-content">
+              <h4>Closed Auditorium</h4>
+              <p></p>
+              <div class="author-image">
+              <a href="" target="_main" > 
+                    <img src="images/meta-NAVYUACHTNA.png"  > </a>
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+          if($(e.target).hasClass('external')) {
+            return;
+          }
+          e.preventDefault();
+          $('#menu').removeClass('active');
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+</html>

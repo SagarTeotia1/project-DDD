@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatting Page</title>
+    <style>
+        body {
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color:  #fcfbf8; 
+            text-align: center;
+            
+        }
+
+        h1, h2 {
+            color: #020101;
+        }
+
+        #myTextBox{
+            width: 80%;
+            padding: 10px;
+            margin: 20px auto;
+            box-sizing: border-box;
+        }
+
+        #redirect-link {
+            display: inline-block;
+            background-color: #00bbf0;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #redirect-link:hover {
+            background-color: #00bbf0;
+        }
+    </style>
+</head>
+<body>
+
+<h1><img src="images/logo DDD.jpeg" alt="Nav Yua Chetna" width="200"></h1>
+<h2>Welcome to Our chatting Application!</h2>
+
+<label for="myTextBox">Copy ID From Here: </label>
+<input type="text" id="myTextBox" name="myTextBox" value="0x25894D6510177d6EA0bD738CC00Bb70E3b8E6FA3">
+<br>
+<label for="myTextBox">Copy ID PSWD From Here:</label>
+    <input type="text" id="myTextBox" name="myTextBox" value="12345">
+<br>
+<a href="#" id="redirect-link">click here to login in Application</a>
+
+<script>
+    // JavaScript to handle link redirection
+    document.getElementById('redirect-link').addEventListener('click', function() {
+        // Replace 'https://www.example.com' with the actual URL you want to redirect to
+        window.location.href = 'index1.html';
+    });
+</script>
+
+</body>
+</html>

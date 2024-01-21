@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parental Supervision</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="parentalControlForm" class="card">
+        <h2 class="title">Parental Supervision</h2>
+        <label for="timeLimit" class="label">Set Time Limit (in minutes):</label>
+        <input type="number" id="timeLimit" class="input" placeholder="Enter time limit" required>
+        <button onclick="setTimeLimit()" class="button">Set Time Limit</button>
+        <div id="message" class="message"></div>
+    </div>
+
+    <div id="leaderboard" class="card">
+        <h2 class="title">Time Spend</h2>
+        <ol id="leaderList" class="leader-list">
+            <!-- Leaderboard entries will be dynamically added here -->
+        </ol>
+    </div>
+
+    <div id="progressGraph" class="card">
+        <h2 class="title">Progress Graph</h2>
+        <canvas id="myChart" class="chart"></canvas>
+    </div>
+
+    <div id="progressReport" class="card">
+        <h2 class="title">Progress Report</h2>
+        <p id="reportText" class="report-text"></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
